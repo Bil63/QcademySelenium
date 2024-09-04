@@ -33,11 +33,11 @@ public class BasicSelectors {
     void RegistrationTest1() throws InterruptedException {
 
         // Arrange
-        String email = "bugyboss5+9@gamil.com";
+        String email = "bugyboss5+14@gmail.com";
         String vorname = "John";
-        String nachname = "Doe";
+        String nachname = "Max";
         String password = "lksalhd5dk";
-        String expected = "John Doe";
+        String expected = "John Max";
 
         // Act
         driver.get("http://www.automationpractice.pl/index.php?controller=authentication&back=my-account");
@@ -57,10 +57,12 @@ public class BasicSelectors {
         Select yearsSelct = new Select(driver.findElement(By.id("years")));
         yearsSelct.selectByIndex(5);
         driver.findElement(By.id("submitAccount")).click();
-        Thread.sleep(3000);
+        Thread.sleep(10000);
         String userName = driver.findElement(By.className("account")).getText().trim();
 
         // Assert
         Assertions.assertEquals(expected, userName);
     }
 }
+
+

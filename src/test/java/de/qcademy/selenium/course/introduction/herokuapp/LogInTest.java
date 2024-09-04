@@ -60,7 +60,7 @@ public class LogInTest {
         userNameField.sendKeys("invlaidUserName");
         passwordField.sendKeys("SuperSecretPassword!");
         logInButton.click();
-        Thread.sleep(3000);
+        Thread.sleep(7000);
 
         WebElement successMessage = driver.findElement(By.id("flash"));
         assert(successMessage.getText().contains("Your username is invalid!"));
